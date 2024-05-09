@@ -21,8 +21,8 @@
 #include "port_motor.h"
 
 /* Defines and enums ----------------------------------------------------------*/
-#define AUTOMATIC_DOOR_OPENING_CLOSING_TIMEOUT_MS 5000 /*!< Timeout for the automatic door to open or close */
-#define AUTOMATIC_DOOR_INACTIVITY_TIMEOUT_MS 5000      /*!< Timeout for the automatic door to leave the door open or closed */
+#define AUTOMATIC_DOOR_OPENING_CLOSING_TIMEOUT_MS  /*!< Timeout for the automatic door to open or close */
+#define AUTOMATIC_DOOR_INACTIVITY_TIMEOUT_MS      /*!< Timeout for the automatic door to leave the door open or closed */
 
 /* Enums */
 /**

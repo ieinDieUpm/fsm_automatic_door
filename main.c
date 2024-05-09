@@ -29,7 +29,6 @@ int main()
     port_system_init();
 
     // Create an automatic door FSM system
-    fsm_t *p_fsm_automatic_door = fsm_automatic_door_new(&button_emergency, &led_opening, &led_closing, &pir_sensor_automatic_door, &motor_automatic_door);
 
     while (1)
     {

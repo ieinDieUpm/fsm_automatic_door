@@ -16,14 +16,14 @@
 
 /* Defines and macros --------------------------------------------------------*/
 // HW Nucleo-STM32F446RE:
-#define LED_OPENING_GPIO GPIOB /*!< GPIO port of the LED for opening in the automatic door */
-#define LED_OPENING_PIN 3      /*!< GPIO pin of the LED for opening in the automatic door */
-#define LED_CLOSING_GPIO GPIOB /*!< GPIO port of the LED for closing in the automatic door */
-#define LED_CLOSING_PIN 4      /*!< GPIO pin of the LED for closing in the automatic door */
-#define LED_OPENING_TIMER TIM3 /*!< Timer to control the blinking of the opening LED */
-#define LED_CLOSING_TIMER TIM4 /*!< Timer to control the blinking of the closing LED */
-#define LED_OPENING_TIMER_BLINK_SEMI_PERIOD_MS 500 /*!< Semi-period of the blinking of the opening LED */
-#define LED_CLOSING_TIMER_BLINK_SEMI_PERIOD_MS 100 /*!< Semi-period of the blinking of the closing LED */
+#define LED_OPENING_GPIO  /*!< GPIO port of the LED for opening in the automatic door */
+#define LED_OPENING_PIN       /*!< GPIO pin of the LED for opening in the automatic door */
+#define LED_CLOSING_GPIO  /*!< GPIO port of the LED for closing in the automatic door */
+#define LED_CLOSING_PIN       /*!< GPIO pin of the LED for closing in the automatic door */
+#define LED_OPENING_TIMER  /*!< Timer to control the blinking of the opening LED */
+#define LED_CLOSING_TIMER  /*!< Timer to control the blinking of the closing LED */
+#define LED_OPENING_TIMER_BLINK_SEMI_PERIOD_MS  /*!< Semi-period of the blinking of the opening LED */
+#define LED_CLOSING_TIMER_BLINK_SEMI_PERIOD_MS  /*!< Semi-period of the blinking of the closing LED */
 
 /* Typedefs --------------------------------------------------------------------*/
 /**

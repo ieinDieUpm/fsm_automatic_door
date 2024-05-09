@@ -247,13 +247,7 @@ void do_stay_closed(fsm_t *p_this)
  *
  */
 fsm_trans_t fsm_trans_automatic_door[] = {
-    {CLOSED, check_open, OPENING, do_open_door},
-    {OPENING, check_opening_timeout, OPEN, do_stay_open},
-    {OPEN, check_keep_open, OPEN, do_keep_open},
-    {OPEN, check_inactivity_timeout, CLOSING, do_close_door},
-    {CLOSING, check_presence_or_button, OPENING, do_stop_closing_door},
-    {CLOSING, check_closing_timeout, CLOSED, do_stay_closed},
-    {-1, NULL, -1, NULL},
+    
 };
 
 uint32_t fsm_automatic_door_get_last_time_presence(fsm_t *p_this)
@@ -292,31 +286,7 @@ bool fsm_automatic_door_get_presence_status(fsm_t *p_this)
  */
 void fsm_automatic_door_init(fsm_t *p_this, port_button_hw_t *p_button, port_led_hw_t *p_led_open, port_led_hw_t *p_led_close, port_pir_hw_t *p_pir, port_motor_hw_t *p_motor)
 {
-    fsm_automatic_door_t *p_fsm = (fsm_automatic_door_t *)(p_this);
-    fsm_init(p_this, fsm_trans_automatic_door);
-
-    // Assign the peripherals to the FSM
-    p_fsm->p_button = p_button;
-    p_fsm->p_led_open = p_led_open;
-    p_fsm->p_led_close = p_led_close;
-    p_fsm->p_pir_sensor = p_pir;
-    p_fsm->p_motor = p_motor;
-
-    // Initialize the last time the  was activated
-    p_fsm->last_time_presence_or_button = 0;
-
-    // Initialize the presence status
-    p_fsm->presence_or_button_status = false;
-
-    // Initialize the peripherals
-    port_button_init(p_button);
-    port_led_init(p_led_open);
-    port_led_init(p_led_close);
-    port_pir_sensor_init(p_pir);
-    port_motor_init(p_motor);
-
-    // Set the LED closed
-    port_led_on(p_led_close);
+    
 }
 
 /* Create FSM */
