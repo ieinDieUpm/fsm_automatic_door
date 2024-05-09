@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ejercicio_295',['Ejercicio',['../md_ejercicio.html',1,'']]]
+  ['sistema_20de_20puerta_20automática_295',['Sistema de puerta automática',['../index.html',1,'']]]
 ];

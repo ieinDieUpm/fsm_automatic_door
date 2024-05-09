@@ -23,10 +23,10 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "FSM automatic door", "index.html", [
-    [ "Automatic door system", "index.html", [
+    [ "Sistema de puerta automática", "index.html", [
       [ "Implementación HW", "index.html#autotoc_md3", [
-        [ "PIR sensor", "index.html#autotoc_md4", null ],
-        [ "Button", "index.html#autotoc_md5", null ],
+        [ "Sensor PIR", "index.html#autotoc_md4", null ],
+        [ "Botón de emergencia", "index.html#autotoc_md5", null ],
         [ "LEDs", "index.html#autotoc_md6", null ],
         [ "Motor", "index.html#autotoc_md7", null ]
       ] ],

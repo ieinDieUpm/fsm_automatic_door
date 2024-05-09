@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>FSM automatic door: Automatic door system</title>
+<title>FSM automatic door: Sistema de puerta automática</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -83,25 +83,25 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Automatic door system </div>  </div>
+<div class="title">Sistema de puerta automática </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This project implements an alarm system with a PIR, a button and 2 LEDs. The system uses an FSM to manage the different states of the system and hardware. The HW configuration is shown in the following picture:</p>
+<div class="textblock"><p>Este proyecto implementa un sistema de puerta automática con un sensor PIR, un botón y 2 LEDs. El sistema utiliza una FSM para gestionar los diferentes estados del sistema y el hardware. La configuración HW se muestra en la siguiente imagen:</p>
 <div class="image">
 <img src="fsm_automatic_door_bb.png" alt=""/>
 <div class="caption">
-HW Alarm</div></div>
-   <p>The system uses an FSM to manage the different states of the system and hardware. This picture shows the FSM of the system:</p>
+HW puerta automática</div></div>
+   <p>El sistema usa una FSM para gestionar los diferentes estados del sistema y el hardware. La siguiente imagen muestra la FSM del sistema:</p>
 <div class="image">
 <img src="fsm_automatic_door.png" alt=""/>
 <div class="caption">
-FSM Alarm</div></div>
-   <p>You can generate as many sensor detectors as you want by creating a new FSM and assigning the corresponding peripherals to the system. The system which is implemented in the <code><a class="el" href="main_8c.html" title="Main file for the automatic door system.">main.c</a></code> file. The system uses the following peripherals:</p>
+FSM puerta automática</div></div>
+   <p>Puede generar tantos detectores de sensores como desee creando una nueva FSM y asignando los periféricos correspondientes al sistema. El sistema que se implementa en el archivo <code><a class="el" href="main_8c.html" title="Main file for the automatic door system.">main.c</a></code>. El sistema utiliza los siguientes periféricos:</p>
 <h1><a class="anchor" id="autotoc_md3"></a>
 Implementación HW</h1>
 <h2><a class="anchor" id="autotoc_md4"></a>
-PIR sensor</h2>
-<p>The PIR sensor is connected to the pin <code>PA10</code>. The sensor is configured as an input with no push-pull resistor. The sensor generates an interrupt when it detects movement. The interrupt is configured with the following settings:</p>
+Sensor PIR</h2>
+<p>El sensor PIR es un sensor de movimiento que detecta la presencia de personas. El sensor está configurado como una entrada sin resistencia de pull-up/pull-down. El sensor genera una interrupción cuando detecta movimiento. La interrupción está configurada con los siguientes ajustes:</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Parameter </th><th class="markdownTableHeadNone">Value  </th></tr>
@@ -125,8 +125,8 @@ PIR sensor</h2>
 <td class="markdownTableBodyNone">Subpriority </td><td class="markdownTableBodyNone">0  </td></tr>
 </table>
 <h2><a class="anchor" id="autotoc_md5"></a>
-Button</h2>
-<p>The button is connected to the pin <code>PC13</code>. The button is configured as an input with no push-pull resistor. The button generates an interrupt when it is both pressed and released. The interrupt is configured with the following settings:</p>
+Botón de emergencia</h2>
+<p>El botón está configurado como una entrada sin resistencia de pull-up/pull-down. El botón genera una interrupción cuando se presiona y se suelta. La interrupción está configurada con los siguientes ajustes:</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Parameter </th><th class="markdownTableHeadNone">Value  </th></tr>
@@ -151,8 +151,8 @@ Button</h2>
 </table>
 <h2><a class="anchor" id="autotoc_md6"></a>
 LEDs</h2>
-<p>There are 2 LEDs to indicate the state of the system. A <b>green LED</b> (<code>led_opening</code>) is used to indicate that the automatic door is opening (blinking) or open (on). A <b>red LED</b> (<code>led_closing</code>) is used to indicate that the automatic door is closing (blinking) or closed (on). The LEDs are configured with the following settings:</p>
-<p>Both LEDs blink with a different interrupt interval. Each one is controlled by a different timer to generate interrupts.</p>
+<p>Hay 2 LEDs para indicar el estado del sistema. Un <b>LED verde</b> (<code>led_opening</code>) se utiliza para indicar que la puerta automática se está abriendo (parpadeando) o abierta (encendida). Un <b>LED rojo</b> (<code>led_closing</code>) se utiliza para indicar que la puerta automática se está cerrando (parpadeando) o cerrada (encendida). Los LEDs están configurados con los siguientes ajustes:</p>
+<p>Ambos LEDs parpadean con un intervalo de interrupción diferente. Cada uno es controlado por un temporizador diferente para generar interrupciones.</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Parameter </th><th class="markdownTableHeadNone">Value  </th></tr>
