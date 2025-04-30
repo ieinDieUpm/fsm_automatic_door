@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>FSM automatic door: port/stm32f4/include/port_button.h File Reference</title>
+<title>FSM automatic door: port/include/port_button.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -83,89 +83,90 @@ $(document).ready(function(){initNavTree('port__button_8h.html',''); initResizab
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">port_button.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Header file for the button port layer.  
+<p>Header for the portable functions to interact with the HW of the buttons. The functions must be implemented in the platform-specific code.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="port__system_8h.html">port_system.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structport__button__hw__t.html">port_button_hw_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to define the HW dependencies of a button.  <a href="structport__button__hw__t.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:abab3dff6d66866de0833c60b15b3d0f4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__button_8h.html#abab3dff6d66866de0833c60b15b3d0f4">BUTTON_EMERGENCY_GPIO</a>&#160;&#160;&#160;GPIOC</td></tr>
-<tr class="separator:abab3dff6d66866de0833c60b15b3d0f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addd997891e290f6bfba12809f9b215fe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__button_8h.html#addd997891e290f6bfba12809f9b215fe">BUTTON_EMERGENCY_PIN</a>&#160;&#160;&#160;13</td></tr>
-<tr class="separator:addd997891e290f6bfba12809f9b215fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad85a3bebace04ed70c6f66991ba31bbf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__button_8h.html#ad85a3bebace04ed70c6f66991ba31bbf">PORT_BUTTON_AUTOMATIC_DOOR_ID</a></td></tr>
+<tr class="separator:ad85a3bebace04ed70c6f66991ba31bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aea2344cac2968a61b6feed8fe7e64113"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__button_8h.html#aea2344cac2968a61b6feed8fe7e64113">port_button_init</a> (<a class="el" href="structport__button__hw__t.html">port_button_hw_t</a> *p_button)</td></tr>
-<tr class="memdesc:aea2344cac2968a61b6feed8fe7e64113"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the button.  <a href="port__button_8h.html#aea2344cac2968a61b6feed8fe7e64113">More...</a><br /></td></tr>
-<tr class="separator:aea2344cac2968a61b6feed8fe7e64113"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32509d1783fd14324f30b0e1cd8d86e1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__button_8h.html#a32509d1783fd14324f30b0e1cd8d86e1">port_button_read_gpio</a> (<a class="el" href="structport__button__hw__t.html">port_button_hw_t</a> *p_button)</td></tr>
-<tr class="memdesc:a32509d1783fd14324f30b0e1cd8d86e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the status of the button.  <a href="port__button_8h.html#a32509d1783fd14324f30b0e1cd8d86e1">More...</a><br /></td></tr>
-<tr class="separator:a32509d1783fd14324f30b0e1cd8d86e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ea3354bb4cd96f3a8ffd16cff7ddc40"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__button_8h.html#a8ea3354bb4cd96f3a8ffd16cff7ddc40">port_button_is_pressed</a> (<a class="el" href="structport__button__hw__t.html">port_button_hw_t</a> *p_button)</td></tr>
-<tr class="memdesc:a8ea3354bb4cd96f3a8ffd16cff7ddc40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the status of the button. The button is considered pressed when it has been both pressed; it is not necessary to be released.  <a href="port__button_8h.html#a8ea3354bb4cd96f3a8ffd16cff7ddc40">More...</a><br /></td></tr>
-<tr class="separator:a8ea3354bb4cd96f3a8ffd16cff7ddc40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:ac97fd0bf200851787c2a017e69ac6a11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structport__button__hw__t.html">port_button_hw_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__button_8h.html#ac97fd0bf200851787c2a017e69ac6a11">button_emergency</a></td></tr>
-<tr class="separator:ac97fd0bf200851787c2a017e69ac6a11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a60ec4a29c03b384c975a7780082ca3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__button_8h.html#a8a60ec4a29c03b384c975a7780082ca3">port_button_init</a> (uint32_t button_id)</td></tr>
+<tr class="memdesc:a8a60ec4a29c03b384c975a7780082ca3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the HW specifications of a given button.  <a href="port__button_8h.html#a8a60ec4a29c03b384c975a7780082ca3">More...</a><br /></td></tr>
+<tr class="separator:a8a60ec4a29c03b384c975a7780082ca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1f883bdca7975d9266bbc157421607b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__button_8h.html#ac1f883bdca7975d9266bbc157421607b">port_button_get_status</a> (uint32_t button_id)</td></tr>
+<tr class="memdesc:ac1f883bdca7975d9266bbc157421607b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the status of the button. The button is considered pressed when it has been both pressed and released.  <a href="port__button_8h.html#ac1f883bdca7975d9266bbc157421607b">More...</a><br /></td></tr>
+<tr class="separator:ac1f883bdca7975d9266bbc157421607b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbeecf7cd5c171defb1eb9d83226fd69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__button_8h.html#acbeecf7cd5c171defb1eb9d83226fd69">port_button_set_status</a> (uint32_t button_id, bool pressed)</td></tr>
+<tr class="memdesc:acbeecf7cd5c171defb1eb9d83226fd69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the button as pressed. This function is used to set the button status to pressed when it has been pressed and released.  <a href="port__button_8h.html#acbeecf7cd5c171defb1eb9d83226fd69">More...</a><br /></td></tr>
+<tr class="separator:acbeecf7cd5c171defb1eb9d83226fd69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5182404de679556d4b9081d8ad24a15"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__button_8h.html#ae5182404de679556d4b9081d8ad24a15">port_button_read_value</a> (uint32_t button_id)</td></tr>
+<tr class="memdesc:ae5182404de679556d4b9081d8ad24a15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of the GPIO connected to the button.  <a href="port__button_8h.html#ae5182404de679556d4b9081d8ad24a15">More...</a><br /></td></tr>
+<tr class="separator:ae5182404de679556d4b9081d8ad24a15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Header file for the button port layer. </p>
-<dl class="section author"><dt>Author</dt><dd>Josué Pagán (<a href="#" onclick="location.href='mai'+'lto:'+'j.p'+'ag'+'an@'+'up'+'m.e'+'s'; return false;">j.pag<span style="display: none;">.nosp@m.</span>an@u<span style="display: none;">.nosp@m.</span>pm.es</a>) </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2024-04-01 </dd></dl>
+<div class="textblock"><p>Header for the portable functions to interact with the HW of the buttons. The functions must be implemented in the platform-specific code. </p>
+<dl class="section author"><dt>Author</dt><dd>Josue Pagán Ortiz (<a href="#" onclick="location.href='mai'+'lto:'+'j.p'+'ag'+'an@'+'up'+'m.e'+'s'; return false;">j.pag<span style="display: none;">.nosp@m.</span>an@u<span style="display: none;">.nosp@m.</span>pm.es</a>) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2025-04-01 </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="abab3dff6d66866de0833c60b15b3d0f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abab3dff6d66866de0833c60b15b3d0f4">&#9670;&nbsp;</a></span>BUTTON_EMERGENCY_GPIO</h2>
+<a id="ad85a3bebace04ed70c6f66991ba31bbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad85a3bebace04ed70c6f66991ba31bbf">&#9670;&nbsp;</a></span>PORT_BUTTON_AUTOMATIC_DOOR_ID</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define BUTTON_EMERGENCY_GPIO&#160;&#160;&#160;GPIOC</td>
+          <td class="memname">#define PORT_BUTTON_AUTOMATIC_DOOR_ID</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>GPIO port of the button in the Nucleo board </p>
-
-</div>
-</div>
-<a id="addd997891e290f6bfba12809f9b215fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#addd997891e290f6bfba12809f9b215fe">&#9670;&nbsp;</a></span>BUTTON_EMERGENCY_PIN</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define BUTTON_EMERGENCY_PIN&#160;&#160;&#160;13</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>GPIO pin of the button in the Nucleo board </p>
+<p>Nucleo board button identifier </p>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="aea2344cac2968a61b6feed8fe7e64113"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea2344cac2968a61b6feed8fe7e64113">&#9670;&nbsp;</a></span>port_button_init()</h2>
+<a id="ac1f883bdca7975d9266bbc157421607b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1f883bdca7975d9266bbc157421607b">&#9670;&nbsp;</a></span>port_button_get_status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool port_button_get_status </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>button_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the status of the button. The button is considered pressed when it has been both pressed and released. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button_id</td><td>Button ID.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true If the button is pressed </dd>
+<dd>
+false If the button is not pressed </dd></dl>
+
+</div>
+</div>
+<a id="a8a60ec4a29c03b384c975a7780082ca3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a60ec4a29c03b384c975a7780082ca3">&#9670;&nbsp;</a></span>port_button_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -173,90 +174,86 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void port_button_init </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structport__button__hw__t.html">port_button_hw_t</a> *&#160;</td>
-          <td class="paramname"><em>p_button</em></td><td>)</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>button_id</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Initializes the button. </p>
+<p>Configure the HW specifications of a given button. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">p_button</td><td>Pointer to the button structure. </td></tr>
+    <tr><td class="paramname">button_id</td><td>Button ID. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a8ea3354bb4cd96f3a8ffd16cff7ddc40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ea3354bb4cd96f3a8ffd16cff7ddc40">&#9670;&nbsp;</a></span>port_button_is_pressed()</h2>
+<a id="ae5182404de679556d4b9081d8ad24a15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5182404de679556d4b9081d8ad24a15">&#9670;&nbsp;</a></span>port_button_read_value()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool port_button_is_pressed </td>
+          <td class="memname">bool port_button_read_value </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structport__button__hw__t.html">port_button_hw_t</a> *&#160;</td>
-          <td class="paramname"><em>p_button</em></td><td>)</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>button_id</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Gets the status of the button. The button is considered pressed when it has been both pressed; it is not necessary to be released. </p>
+<p>Get the value of the GPIO connected to the button. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">p_button</td><td>Pointer to the button structure. </td></tr>
+    <tr><td class="paramname">button_id</td><td>Button ID. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if the button is pressed, false otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true If the button value is high </dd>
+<dd>
+false If the button value is low </dd></dl>
 
 </div>
 </div>
-<a id="a32509d1783fd14324f30b0e1cd8d86e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32509d1783fd14324f30b0e1cd8d86e1">&#9670;&nbsp;</a></span>port_button_read_gpio()</h2>
+<a id="acbeecf7cd5c171defb1eb9d83226fd69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbeecf7cd5c171defb1eb9d83226fd69">&#9670;&nbsp;</a></span>port_button_set_status()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool port_button_read_gpio </td>
+          <td class="memname">void port_button_set_status </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structport__button__hw__t.html">port_button_hw_t</a> *&#160;</td>
-          <td class="paramname"><em>p_button</em></td><td>)</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>button_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>pressed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Gets the status of the button. </p>
+<p>Set the button as pressed. This function is used to set the button status to pressed when it has been pressed and released. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">p_button</td><td>Pointer to the button structure. </td></tr>
+    <tr><td class="paramname">button_id</td><td>Button ID. </td></tr>
+    <tr><td class="paramname">pressed</td><td>If true, the button is set as pressed. If false, the button is set as not pressed. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if the button is pressed, false otherwise. </dd></dl>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="ac97fd0bf200851787c2a017e69ac6a11"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac97fd0bf200851787c2a017e69ac6a11">&#9670;&nbsp;</a></span>button_emergency</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structport__button__hw__t.html">port_button_hw_t</a> button_emergency</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Button of the automatic door system. Public for access to interrupt handlers. </p>
 
 </div>
 </div>
@@ -265,7 +262,7 @@ Variables</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_651562d8bf6cfd3e81eff5b570d7df50.html">port</a></li><li class="navelem"><a class="el" href="dir_aff93352f483d815f4aad2ce8569e33b.html">stm32f4</a></li><li class="navelem"><a class="el" href="dir_8338216af5b9c682f75cf365d3e92719.html">include</a></li><li class="navelem"><a class="el" href="port__button_8h.html">port_button.h</a></li>
+    <li class="navelem"><a class="el" href="dir_651562d8bf6cfd3e81eff5b570d7df50.html">port</a></li><li class="navelem"><a class="el" href="dir_3b4aa3705552218a151a51dac694657d.html">include</a></li><li class="navelem"><a class="el" href="port__button_8h.html">port_button.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>

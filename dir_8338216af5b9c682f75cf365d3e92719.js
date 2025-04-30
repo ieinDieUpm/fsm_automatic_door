@@ -1,8 +1,8 @@
 var dir_8338216af5b9c682f75cf365d3e92719 =
 [
-    [ "port_button.h", "port__button_8h.html", "port__button_8h" ],
-    [ "port_led.h", "port__led_8h.html", "port__led_8h" ],
-    [ "port_motor.h", "port__motor_8h.html", "port__motor_8h" ],
-    [ "port_pir_sensor.h", "port__pir__sensor_8h.html", "port__pir__sensor_8h" ],
-    [ "port_system.h", "port__system_8h.html", "port__system_8h" ]
+    [ "stm32f4_button.h", "stm32f4__button_8h.html", "stm32f4__button_8h" ],
+    [ "stm32f4_led.h", "stm32f4__led_8h.html", "stm32f4__led_8h" ],
+    [ "stm32f4_motor.h", "stm32f4__motor_8h.html", "stm32f4__motor_8h" ],
+    [ "stm32f4_pir_sensor.h", "stm32f4__pir__sensor_8h.html", "stm32f4__pir__sensor_8h" ],
+    [ "stm32f4xx_hal_conf.h", "stm32f4xx__hal__conf_8h.html", "stm32f4xx__hal__conf_8h" ]
 ];

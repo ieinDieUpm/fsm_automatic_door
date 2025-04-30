@@ -83,8 +83,8 @@ $(document).ready(function(){initNavTree('fsm__automatic__door_8h.html',''); ini
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -95,24 +95,24 @@ $(document).ready(function(){initNavTree('fsm__automatic__door_8h.html',''); ini
 <p>Header file for the automatic door FSM.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
 <code>#include &lt;fsm.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="port__button_8h.html">port_button.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="port__led_8h.html">port_led.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="port__pir__sensor_8h.html">port_pir_sensor.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="port__motor_8h.html">port_motor.h</a>&quot;</code><br />
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfsm__automatic__door__t.html">fsm_automatic_door_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to define the automatic door FSM.  <a href="structfsm__automatic__door__t.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:ae3d6daf51f43f9514464f5c3c958c671"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__automatic__door_8h.html#ae3d6daf51f43f9514464f5c3c958c671">AUTOMATIC_DOOR_OPENING_CLOSING_TIMEOUT_MS</a></td></tr>
 <tr class="separator:ae3d6daf51f43f9514464f5c3c958c671"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73b6b8a539748da0c4bde0873d2ba9d4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__automatic__door_8h.html#a73b6b8a539748da0c4bde0873d2ba9d4">AUTOMATIC_DOOR_INACTIVITY_TIMEOUT_MS</a></td></tr>
 <tr class="separator:a73b6b8a539748da0c4bde0873d2ba9d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a3e9c2c3d6a25dcc488c227cbf213fb9d"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structfsm__automatic__door__t.html">fsm_automatic_door_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__automatic__door_8h.html#a3e9c2c3d6a25dcc488c227cbf213fb9d">fsm_automatic_door_t</a></td></tr>
+<tr class="separator:a3e9c2c3d6a25dcc488c227cbf213fb9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -131,15 +131,18 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a00089fec35fbeee317aa69a3686f88c5"><td class="memItemLeft" align="right" valign="top">fsm_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__automatic__door_8h.html#a00089fec35fbeee317aa69a3686f88c5">fsm_automatic_door_new</a> (<a class="el" href="structport__button__hw__t.html">port_button_hw_t</a> *p_button, <a class="el" href="structport__led__hw__t.html">port_led_hw_t</a> *p_led_open, <a class="el" href="structport__led__hw__t.html">port_led_hw_t</a> *p_led_close, <a class="el" href="structport__pir__hw__t.html">port_pir_hw_t</a> *p_pir, <a class="el" href="structport__motor__hw__t.html">port_motor_hw_t</a> *p_motor)</td></tr>
-<tr class="memdesc:a00089fec35fbeee317aa69a3686f88c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new automatic door FSM.  <a href="fsm__automatic__door_8h.html#a00089fec35fbeee317aa69a3686f88c5">More...</a><br /></td></tr>
-<tr class="separator:a00089fec35fbeee317aa69a3686f88c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a4568b44240223c77666795190a67b8"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__automatic__door_8h.html#a1a4568b44240223c77666795190a67b8">fsm_automatic_door_get_last_time_presence</a> (fsm_t *p_this)</td></tr>
-<tr class="memdesc:a1a4568b44240223c77666795190a67b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the last time a presence was detected.  <a href="fsm__automatic__door_8h.html#a1a4568b44240223c77666795190a67b8">More...</a><br /></td></tr>
-<tr class="separator:a1a4568b44240223c77666795190a67b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4f402c4dda5429b845a7a993c0b0bed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__automatic__door_8h.html#ac4f402c4dda5429b845a7a993c0b0bed">fsm_automatic_door_get_presence_status</a> (fsm_t *p_this)</td></tr>
-<tr class="memdesc:ac4f402c4dda5429b845a7a993c0b0bed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the presence status of the door.  <a href="fsm__automatic__door_8h.html#ac4f402c4dda5429b845a7a993c0b0bed">More...</a><br /></td></tr>
-<tr class="separator:ac4f402c4dda5429b845a7a993c0b0bed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac43027667e96f3f9a2d3edd8fac42654"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structfsm__automatic__door__t.html">fsm_automatic_door_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__automatic__door_8h.html#ac43027667e96f3f9a2d3edd8fac42654">fsm_automatic_door_new</a> (uint32_t button_id, uint32_t led_opening_id, uint32_t led_closing_id, uint32_t pir_sensor_id, uint32_t motor_id)</td></tr>
+<tr class="memdesc:ac43027667e96f3f9a2d3edd8fac42654"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new automatic door FSM.  <a href="fsm__automatic__door_8h.html#ac43027667e96f3f9a2d3edd8fac42654">More...</a><br /></td></tr>
+<tr class="separator:ac43027667e96f3f9a2d3edd8fac42654"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b60f1e47d915840f78ecd36519650c9"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__automatic__door_8h.html#a8b60f1e47d915840f78ecd36519650c9">fsm_automatic_door_get_last_time_presence</a> (<a class="el" href="structfsm__automatic__door__t.html">fsm_automatic_door_t</a> *p_this)</td></tr>
+<tr class="memdesc:a8b60f1e47d915840f78ecd36519650c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the last time a presence was detected.  <a href="fsm__automatic__door_8h.html#a8b60f1e47d915840f78ecd36519650c9">More...</a><br /></td></tr>
+<tr class="separator:a8b60f1e47d915840f78ecd36519650c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a738ffc4943176a556b3687da7b97d15a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__automatic__door_8h.html#a738ffc4943176a556b3687da7b97d15a">fsm_automatic_door_get_presence_status</a> (<a class="el" href="structfsm__automatic__door__t.html">fsm_automatic_door_t</a> *p_this)</td></tr>
+<tr class="memdesc:a738ffc4943176a556b3687da7b97d15a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the presence status of the door.  <a href="fsm__automatic__door_8h.html#a738ffc4943176a556b3687da7b97d15a">More...</a><br /></td></tr>
+<tr class="separator:a738ffc4943176a556b3687da7b97d15a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabe01f877c63392aa7f757eefb0c31ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__automatic__door_8h.html#aabe01f877c63392aa7f757eefb0c31ce">fsm_automatic_door_fire</a> (<a class="el" href="structfsm__automatic__door__t.html">fsm_automatic_door_t</a> *p_fsm)</td></tr>
+<tr class="memdesc:aabe01f877c63392aa7f757eefb0c31ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fires the FSM of the automatic door.  <a href="fsm__automatic__door_8h.html#aabe01f877c63392aa7f757eefb0c31ce">More...</a><br /></td></tr>
+<tr class="separator:aabe01f877c63392aa7f757eefb0c31ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header file for the automatic door FSM. </p>
@@ -176,6 +179,22 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a3e9c2c3d6a25dcc488c227cbf213fb9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e9c2c3d6a25dcc488c227cbf213fb9d">&#9670;&nbsp;</a></span>fsm_automatic_door_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structfsm__automatic__door__t.html">fsm_automatic_door_t</a> <a class="el" href="structfsm__automatic__door__t.html">fsm_automatic_door_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Forward declaration of the FSM structure </p>
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="ae943f70cd6d6edb91657643378b7efed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae943f70cd6d6edb91657643378b7efed">&#9670;&nbsp;</a></span>FSM_AUTOMATIC_DOOR_STATES</h2>
@@ -204,8 +223,34 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a1a4568b44240223c77666795190a67b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a4568b44240223c77666795190a67b8">&#9670;&nbsp;</a></span>fsm_automatic_door_get_last_time_presence()</h2>
+<a id="aabe01f877c63392aa7f757eefb0c31ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabe01f877c63392aa7f757eefb0c31ce">&#9670;&nbsp;</a></span>fsm_automatic_door_fire()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fsm_automatic_door_fire </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfsm__automatic__door__t.html">fsm_automatic_door_t</a> *&#160;</td>
+          <td class="paramname"><em>p_fsm</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fires the FSM of the automatic door. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_fsm</td><td>Pointer to the FSM structure of the automatic door. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8b60f1e47d915840f78ecd36519650c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b60f1e47d915840f78ecd36519650c9">&#9670;&nbsp;</a></span>fsm_automatic_door_get_last_time_presence()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -213,7 +258,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">uint32_t fsm_automatic_door_get_last_time_presence </td>
           <td>(</td>
-          <td class="paramtype">fsm_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="structfsm__automatic__door__t.html">fsm_automatic_door_t</a> *&#160;</td>
           <td class="paramname"><em>p_this</em></td><td>)</td>
           <td></td>
         </tr>
@@ -230,8 +275,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac4f402c4dda5429b845a7a993c0b0bed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4f402c4dda5429b845a7a993c0b0bed">&#9670;&nbsp;</a></span>fsm_automatic_door_get_presence_status()</h2>
+<a id="a738ffc4943176a556b3687da7b97d15a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a738ffc4943176a556b3687da7b97d15a">&#9670;&nbsp;</a></span>fsm_automatic_door_get_presence_status()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -239,7 +284,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">bool fsm_automatic_door_get_presence_status </td>
           <td>(</td>
-          <td class="paramtype">fsm_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="structfsm__automatic__door__t.html">fsm_automatic_door_t</a> *&#160;</td>
           <td class="paramname"><em>p_this</em></td><td>)</td>
           <td></td>
         </tr>
@@ -256,41 +301,41 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a00089fec35fbeee317aa69a3686f88c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00089fec35fbeee317aa69a3686f88c5">&#9670;&nbsp;</a></span>fsm_automatic_door_new()</h2>
+<a id="ac43027667e96f3f9a2d3edd8fac42654"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac43027667e96f3f9a2d3edd8fac42654">&#9670;&nbsp;</a></span>fsm_automatic_door_new()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">fsm_t* fsm_automatic_door_new </td>
+          <td class="memname"><a class="el" href="structfsm__automatic__door__t.html">fsm_automatic_door_t</a>* fsm_automatic_door_new </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structport__button__hw__t.html">port_button_hw_t</a> *&#160;</td>
-          <td class="paramname"><em>p_button</em>, </td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>button_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structport__led__hw__t.html">port_led_hw_t</a> *&#160;</td>
-          <td class="paramname"><em>p_led_open</em>, </td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>led_opening_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structport__led__hw__t.html">port_led_hw_t</a> *&#160;</td>
-          <td class="paramname"><em>p_led_close</em>, </td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>led_closing_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structport__pir__hw__t.html">port_pir_hw_t</a> *&#160;</td>
-          <td class="paramname"><em>p_pir</em>, </td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>pir_sensor_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structport__motor__hw__t.html">port_motor_hw_t</a> *&#160;</td>
-          <td class="paramname"><em>p_motor</em>&#160;</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>motor_id</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -303,11 +348,11 @@ Functions</h2></td></tr>
 <p>Creates a new automatic door FSM. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">p_button</td><td>Pointer to the button of the automatic door. </td></tr>
-    <tr><td class="paramname">p_led_open</td><td>Pointer to the opening LED of the automatic door. </td></tr>
-    <tr><td class="paramname">p_led_close</td><td>Pointer to the closing LED of the automatic door. </td></tr>
-    <tr><td class="paramname">p_pir</td><td>Pointer to the PIR sensor of the automatic door. </td></tr>
-    <tr><td class="paramname">p_motor</td><td>Pointer to the motor of the automatic door. </td></tr>
+    <tr><td class="paramname">button_id</td><td>ID of the button to open the door. </td></tr>
+    <tr><td class="paramname">led_opening_id</td><td>ID of the LED that indicates the door is opening. </td></tr>
+    <tr><td class="paramname">led_closing_id</td><td>ID of the LED that indicates the door is closing. </td></tr>
+    <tr><td class="paramname">pir_sensor_id</td><td>ID of the PIR sensor that detects presence in front of the door. </td></tr>
+    <tr><td class="paramname">motor_id</td><td>ID of the motor that opens and closes the door. </td></tr>
   </table>
   </dd>
 </dl>

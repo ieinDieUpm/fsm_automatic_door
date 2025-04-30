@@ -91,23 +91,21 @@ $(document).ready(function(){initNavTree('structfsm__automatic__door__t.html',''
 
 <p>Structure to define the automatic door FSM.  
  <a href="structfsm__automatic__door__t.html#details">More...</a></p>
-
-<p><code>#include &lt;fsm_automatic_door.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a96fd9045bf98bb13e3d8ba3fa8ba00d1"><td class="memItemLeft" align="right" valign="top">fsm_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfsm__automatic__door__t.html#a96fd9045bf98bb13e3d8ba3fa8ba00d1">f</a></td></tr>
 <tr class="separator:a96fd9045bf98bb13e3d8ba3fa8ba00d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a6adea990b0fcdbbb6c7bb37ebe68f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structport__button__hw__t.html">port_button_hw_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfsm__automatic__door__t.html#a2a6adea990b0fcdbbb6c7bb37ebe68f3">p_button</a></td></tr>
-<tr class="separator:a2a6adea990b0fcdbbb6c7bb37ebe68f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34a50c314d27aa71f144fe4d6479914b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structport__led__hw__t.html">port_led_hw_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfsm__automatic__door__t.html#a34a50c314d27aa71f144fe4d6479914b">p_led_open</a></td></tr>
-<tr class="separator:a34a50c314d27aa71f144fe4d6479914b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75ace69e86495f1c1e6c4aaac98130ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structport__led__hw__t.html">port_led_hw_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfsm__automatic__door__t.html#a75ace69e86495f1c1e6c4aaac98130ca">p_led_close</a></td></tr>
-<tr class="separator:a75ace69e86495f1c1e6c4aaac98130ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fdbad9cefbba2d09287518d3db8673e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structport__pir__hw__t.html">port_pir_hw_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfsm__automatic__door__t.html#a5fdbad9cefbba2d09287518d3db8673e">p_pir_sensor</a></td></tr>
-<tr class="separator:a5fdbad9cefbba2d09287518d3db8673e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a648b5c56fa0781cc432c0165172e3433"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structport__motor__hw__t.html">port_motor_hw_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfsm__automatic__door__t.html#a648b5c56fa0781cc432c0165172e3433">p_motor</a></td></tr>
-<tr class="separator:a648b5c56fa0781cc432c0165172e3433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39f06df11a7bbc9954009fe0774dfcc1"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfsm__automatic__door__t.html#a39f06df11a7bbc9954009fe0774dfcc1">button_id</a></td></tr>
+<tr class="separator:a39f06df11a7bbc9954009fe0774dfcc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb8eae3cab633c9246b0e4430a29ac5d"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfsm__automatic__door__t.html#afb8eae3cab633c9246b0e4430a29ac5d">led_opening_id</a></td></tr>
+<tr class="separator:afb8eae3cab633c9246b0e4430a29ac5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf3b83f3bc7d1bd36dd5bb8a6f8a2728"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfsm__automatic__door__t.html#adf3b83f3bc7d1bd36dd5bb8a6f8a2728">led_closing_id</a></td></tr>
+<tr class="separator:adf3b83f3bc7d1bd36dd5bb8a6f8a2728"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20f0264a8ec8e42149de632f4fd6bdff"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfsm__automatic__door__t.html#a20f0264a8ec8e42149de632f4fd6bdff">pir_sensor_id</a></td></tr>
+<tr class="separator:a20f0264a8ec8e42149de632f4fd6bdff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeac45593599aba296f34d482505e059a"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfsm__automatic__door__t.html#aeac45593599aba296f34d482505e059a">motor_id</a></td></tr>
+<tr class="separator:aeac45593599aba296f34d482505e059a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2edb59348a63eb35f71eb5f7f5224855"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfsm__automatic__door__t.html#a2edb59348a63eb35f71eb5f7f5224855">presence_or_button_status</a></td></tr>
 <tr class="separator:a2edb59348a63eb35f71eb5f7f5224855"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a089ad61eba149cbd1b60261e605d4f58"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfsm__automatic__door__t.html#a089ad61eba149cbd1b60261e605d4f58">motor_timeout</a></td></tr>
@@ -118,6 +116,21 @@ Data Fields</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Structure to define the automatic door FSM. </p>
 </div><h2 class="groupheader">Field Documentation</h2>
+<a id="a39f06df11a7bbc9954009fe0774dfcc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39f06df11a7bbc9954009fe0774dfcc1">&#9670;&nbsp;</a></span>button_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t fsm_automatic_door_t::button_id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Button ID </p>
+
+</div>
+</div>
 <a id="a96fd9045bf98bb13e3d8ba3fa8ba00d1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a96fd9045bf98bb13e3d8ba3fa8ba00d1">&#9670;&nbsp;</a></span>f</h2>
 
@@ -148,6 +161,51 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
+<a id="adf3b83f3bc7d1bd36dd5bb8a6f8a2728"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf3b83f3bc7d1bd36dd5bb8a6f8a2728">&#9670;&nbsp;</a></span>led_closing_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t fsm_automatic_door_t::led_closing_id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Closing LED ID </p>
+
+</div>
+</div>
+<a id="afb8eae3cab633c9246b0e4430a29ac5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb8eae3cab633c9246b0e4430a29ac5d">&#9670;&nbsp;</a></span>led_opening_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t fsm_automatic_door_t::led_opening_id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Opening LED ID </p>
+
+</div>
+</div>
+<a id="aeac45593599aba296f34d482505e059a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeac45593599aba296f34d482505e059a">&#9670;&nbsp;</a></span>motor_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t fsm_automatic_door_t::motor_id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Motor ID </p>
+
+</div>
+</div>
 <a id="a089ad61eba149cbd1b60261e605d4f58"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a089ad61eba149cbd1b60261e605d4f58">&#9670;&nbsp;</a></span>motor_timeout</h2>
 
@@ -163,78 +221,18 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="a2a6adea990b0fcdbbb6c7bb37ebe68f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a6adea990b0fcdbbb6c7bb37ebe68f3">&#9670;&nbsp;</a></span>p_button</h2>
+<a id="a20f0264a8ec8e42149de632f4fd6bdff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20f0264a8ec8e42149de632f4fd6bdff">&#9670;&nbsp;</a></span>pir_sensor_id</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structport__button__hw__t.html">port_button_hw_t</a>* fsm_automatic_door_t::p_button</td>
+          <td class="memname">uint32_t fsm_automatic_door_t::pir_sensor_id</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Pointer to the button structure </p>
-
-</div>
-</div>
-<a id="a75ace69e86495f1c1e6c4aaac98130ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a75ace69e86495f1c1e6c4aaac98130ca">&#9670;&nbsp;</a></span>p_led_close</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structport__led__hw__t.html">port_led_hw_t</a>* fsm_automatic_door_t::p_led_close</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Pointer to the closing LED structure </p>
-
-</div>
-</div>
-<a id="a34a50c314d27aa71f144fe4d6479914b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a34a50c314d27aa71f144fe4d6479914b">&#9670;&nbsp;</a></span>p_led_open</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structport__led__hw__t.html">port_led_hw_t</a>* fsm_automatic_door_t::p_led_open</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Pointer to the opening LED structure </p>
-
-</div>
-</div>
-<a id="a648b5c56fa0781cc432c0165172e3433"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a648b5c56fa0781cc432c0165172e3433">&#9670;&nbsp;</a></span>p_motor</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structport__motor__hw__t.html">port_motor_hw_t</a>* fsm_automatic_door_t::p_motor</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Pointer to the motor structure </p>
-
-</div>
-</div>
-<a id="a5fdbad9cefbba2d09287518d3db8673e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5fdbad9cefbba2d09287518d3db8673e">&#9670;&nbsp;</a></span>p_pir_sensor</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structport__pir__hw__t.html">port_pir_hw_t</a>* fsm_automatic_door_t::p_pir_sensor</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Pointer to the PIR sensor structure </p>
+<p>PIR sensor ID </p>
 
 </div>
 </div>
@@ -254,7 +252,7 @@ Data Fields</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>common/include/<a class="el" href="fsm__automatic__door_8h.html">fsm_automatic_door.h</a></li>
+<li>common/src/<a class="el" href="fsm__automatic__door_8c.html">fsm_automatic_door.c</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

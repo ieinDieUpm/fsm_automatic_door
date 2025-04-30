@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rcc_5fhsi_5fcalibration_5fdefault_130',['RCC_HSI_CALIBRATION_DEFAULT',['../port__system_8h.html#a2493eaca64054f112ecca77da42783bc',1,'port_system.h']]]
+  ['vdd_5fvalue_193',['VDD_VALUE',['../stm32f4xx__hal__conf_8h.html#aae550dad9f96d52cfce5e539adadbbb4',1,'stm32f4xx_hal_conf.h']]]
 ];

@@ -1,9 +1,9 @@
 var dir_96ea3e7ce74ccff9e7229beeb516906f =
 [
     [ "interr.c", "interr_8c.html", "interr_8c" ],
-    [ "port_button.c", "port__button_8c.html", "port__button_8c" ],
-    [ "port_led.c", "port__led_8c.html", "port__led_8c" ],
-    [ "port_motor.c", "port__motor_8c.html", "port__motor_8c" ],
-    [ "port_pir_sensor.c", "port__pir__sensor_8c.html", "port__pir__sensor_8c" ],
-    [ "port_system.c", "port__system_8c.html", "port__system_8c" ]
+    [ "stm32f4_button.c", "stm32f4__button_8c.html", "stm32f4__button_8c" ],
+    [ "stm32f4_led.c", "stm32f4__led_8c.html", "stm32f4__led_8c" ],
+    [ "stm32f4_motor.c", "stm32f4__motor_8c.html", "stm32f4__motor_8c" ],
+    [ "stm32f4_pir_sensor.c", "stm32f4__pir__sensor_8c.html", "stm32f4__pir__sensor_8c" ],
+    [ "stm32f4_system.c", "stm32f4__system_8c.html", "stm32f4__system_8c" ]
 ];

@@ -96,20 +96,20 @@ HW puerta automática</div></div>
 <img src="fsm_automatic_door.png" alt=""/>
 <div class="caption">
 FSM puerta automática</div></div>
-   <p>Puede generar tantos detectores de sensores como desee creando una nueva FSM y asignando los periféricos correspondientes al sistema.</p>
+   <p>Puede generar tantos detectores de presencia como desee creando una nueva FSM y asignando los identificadores periféricos correspondientes al sistema.</p>
 <p>Puede descargar los código fuente de este proyecto en el siguiente <a href="https://github.com/ieinDieUpm/fsm_automatic_door">enlace</a>.</p>
 <h1><a class="anchor" id="autotoc_md3"></a>
 Implementación HW</h1>
 <h2><a class="anchor" id="autotoc_md4"></a>
 Sensor PIR</h2>
-<p>El sensor PIR es un sensor de movimiento que detecta la presencia de personas. El sensor está configurado como una entrada sin resistencia de pull-up/pull-down. El sensor genera una interrupción cuando detecta movimiento. La interrupción está configurada con los siguientes ajustes:</p>
+<p>El sensor PIR es un sensor de movimiento que detecta la presencia de personas. El sensor está configurado como una entrada y no necesita resistencia de pull-up/pull-down. El sensor genera una interrupción cuando detecta movimiento. La interrupción está configurada con los siguientes ajustes:</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Parameter </th><th class="markdownTableHeadNone">Value  </th></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Variable name </td><td class="markdownTableBodyNone">pir_sensor_home_alarm  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Pin </td><td class="markdownTableBodyNone">PA10 (D2 on Nucleo)  </td></tr>
+<td class="markdownTableBodyNone">Pin </td><td class="markdownTableBodyNone">PB10 (D6 on Nucleo)  </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Mode </td><td class="markdownTableBodyNone">Input  </td></tr>
 <tr class="markdownTableRowEven">
@@ -127,7 +127,7 @@ Sensor PIR</h2>
 </table>
 <h2><a class="anchor" id="autotoc_md5"></a>
 Botón de emergencia</h2>
-<p>El botón está configurado como una entrada sin resistencia de pull-up/pull-down. El botón genera una interrupción cuando se presiona y se suelta. La interrupción está configurada con los siguientes ajustes:</p>
+<p>El botón está configurado como una entrada sin necesidad de habilitar resistencia de pull-up/pull-down en el microcontrolador. El botón genera una interrupción cuando se presiona y cuando se suelta. La interrupción está configurada con los siguientes ajustes:</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Parameter </th><th class="markdownTableHeadNone">Value  </th></tr>
@@ -160,7 +160,7 @@ LEDs</h2>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Variable name </td><td class="markdownTableBodyNone">led_opening  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Pin </td><td class="markdownTableBodyNone">PB3 (D3 on Nucleo)  </td></tr>
+<td class="markdownTableBodyNone">Pin </td><td class="markdownTableBodyNone">PB6 (D10 on Nucleo)  </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Mode </td><td class="markdownTableBodyNone">Output  </td></tr>
 <tr class="markdownTableRowEven">
@@ -168,7 +168,7 @@ LEDs</h2>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Timer </td><td class="markdownTableBodyNone">TIM3  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Interrupt </td><td class="markdownTableBodyNone"><a class="el" href="interr_8c.html#ac8e51d2183b5230cbd5481f8867adce9" title="Interrupt service routine for the TIM3 timer.">TIM3_IRQHandler()</a>  </td></tr>
+<td class="markdownTableBodyNone">Interrupt </td><td class="markdownTableBodyNone"><a class="el" href="interr_8c.html#ac8e51d2183b5230cbd5481f8867adce9" title="Interrupt service routine for the Timer 3 (TIM3).">TIM3_IRQHandler()</a>  </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Time interval </td><td class="markdownTableBodyNone">500 ms  </td></tr>
 <tr class="markdownTableRowEven">
@@ -182,7 +182,7 @@ LEDs</h2>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Variable name </td><td class="markdownTableBodyNone">led_closing  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Pin </td><td class="markdownTableBodyNone">PB4 (D5 on Nucleo)  </td></tr>
+<td class="markdownTableBodyNone">Pin </td><td class="markdownTableBodyNone">PB9 (D14 on Nucleo)  </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Mode </td><td class="markdownTableBodyNone">Output  </td></tr>
 <tr class="markdownTableRowEven">
@@ -190,7 +190,7 @@ LEDs</h2>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Timer </td><td class="markdownTableBodyNone">TIM4  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Interrupt </td><td class="markdownTableBodyNone"><a class="el" href="interr_8c.html#a7133f3f78767503641d307386e68bd28" title="Interrupt service routine for the TIM4 timer.">TIM4_IRQHandler()</a>  </td></tr>
+<td class="markdownTableBodyNone">Interrupt </td><td class="markdownTableBodyNone"><a class="el" href="interr_8c.html#a7133f3f78767503641d307386e68bd28" title="Interrupt service routine for the Timer 4 (TIM4).">TIM4_IRQHandler()</a>  </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Time interval </td><td class="markdownTableBodyNone">100 ms  </td></tr>
 <tr class="markdownTableRowEven">
@@ -209,7 +209,7 @@ Motor</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Timer </td><td class="markdownTableBodyNone">TIM2  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Interrupt </td><td class="markdownTableBodyNone"><a class="el" href="interr_8c.html#a38ad4725462bdc5e86c4ead4f04b9fc2" title="Interrupt service routine for the TIM2 timer.">TIM2_IRQHandler()</a>  </td></tr>
+<td class="markdownTableBodyNone">Interrupt </td><td class="markdownTableBodyNone"><a class="el" href="interr_8c.html#a38ad4725462bdc5e86c4ead4f04b9fc2" title="Interrupt service routine for the Timer 2 (TIM2).">TIM2_IRQHandler()</a>  </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Time interval </td><td class="markdownTableBodyNone">Diferente para abrir/ cerrar, y para estar abierta  </td></tr>
 <tr class="markdownTableRowOdd">
@@ -230,12 +230,14 @@ Funcionamiento detallado del sistema</h1>
 <li>Por último, guarda el instante de tiempo en el que se ha detectado la presencia o se ha pulsado el botón en la variable <code>last_time_presence_or_button</code> de la FSM.</li>
 </ul>
 </li>
-<li>Cuando la puerta se está abriendo (<code>OPENING</code>) el LED verde parpadea durante <code>AUTOMATIC_DOOR_OPENING_CLOSING_TIMEOUT_MS</code> milisegundos, que es el tiempo que está el motor funcionando. Cuando haya pasado ese tiempo, saltará la ISR <code><a class="el" href="interr_8c.html#a38ad4725462bdc5e86c4ead4f04b9fc2" title="Interrupt service routine for the TIM2 timer.">TIM2_IRQHandler()</a></code>. Esta ISR:<ul>
-<li>Activa el <em>flag</em> <code>timeout</code> del motor llamando a la función <code><a class="el" href="port__motor_8h.html#a69582e2cb4e998fbd654c04300200ea8" title="Set the status of the timer if has finished or not.">port_motor_set_timeout_status()</a></code>. Este flag indica que la puerta se ha abierto por completo, y lo leerá la FSM.</li>
-<li>Limpia el <em>flag</em> de interrupción del temporizador en el registro <code>SR</code>.</li>
+<li>Cuando la puerta se está abriendo (<code>OPENING</code>) el LED verde parpadea durante <code>AUTOMATIC_DOOR_OPENING_CLOSING_TIMEOUT_MS</code> milisegundos, que es el tiempo que está el motor funcionando. Cuando haya pasado ese tiempo, saltará la ISR <code><a class="el" href="interr_8c.html#a38ad4725462bdc5e86c4ead4f04b9fc2" title="Interrupt service routine for the Timer 2 (TIM2).">TIM2_IRQHandler()</a></code>. Esta ISR llama al handler <code>HAL_TIM_IRQHandler()</code> que limpia el <em>flag</em> de interrupción del temporizador en el registro <code>SR</code>, lo que hará que salte la función <code><a class="el" href="interr_8c.html#af8a882d847dbd5750599ef2101383ad3" title="Timer period elapsed callback in non blocking mode.">HAL_TIM_PeriodElapsedCallback()</a></code>. Esta función:<ul>
+<li>Comprueba si la instancia (el <em>timer</em>) del handler es la del motor (<code>STM32F4_MOTOR_AUTOMATIC_DOOR_TIMEOUT_TIMER</code>), que:<ul>
+<li>Activa el <em>flag</em> <code>motor_timeout_status</code> del motor llamando a la función <code><a class="el" href="port__motor_8h.html#a53f9585a6ca61636da62f76cf51af632" title="Set the status of the timer if has finished or not.">port_motor_set_timeout_status()</a></code>. Este flag a **<code>true</code>** indica que la puerta se ha abierto por completo, y lo leerá la FSM.</li>
 </ul>
 </li>
-<li>La FSM comprueba con la función <code><a class="el" href="fsm__automatic__door_8c.html#a8363285d62a9afab7703d755fe94bb97" title="Check if the opening timeout has expired.">check_opening_timeout()</a></code> que el <em>flag</em> <code>timeout</code> del motor está activo. Si es así, la FSM pasa al estado <code>OPEN</code> y llama a la función <code><a class="el" href="fsm__automatic__door_8c.html#a402b82e6c9e85e9b1667e7d516b2a95a" title="Stay with the door open.">do_stay_open()</a></code>.<ul>
+</ul>
+</li>
+<li>La FSM comprueba con la función <code><a class="el" href="fsm__automatic__door_8c.html#a8363285d62a9afab7703d755fe94bb97" title="Check if the opening timeout has expired.">check_opening_timeout()</a></code> que el <em>flag</em> <code>motor_timeout_status</code> del motor está activo. Si es así, la FSM pasa al estado <code>OPEN</code> y llama a la función <code><a class="el" href="fsm__automatic__door_8c.html#a402b82e6c9e85e9b1667e7d516b2a95a" title="Stay with the door open.">do_stay_open()</a></code>.<ul>
 <li>La función <code><a class="el" href="fsm__automatic__door_8c.html#a402b82e6c9e85e9b1667e7d516b2a95a" title="Stay with the door open.">do_stay_open()</a></code>:<ul>
 <li>Deja el LED verde (<code>led_opening</code>) fijo.</li>
 <li>Desactiva el temporizador del parpadeo del LED verde.</li>
@@ -244,8 +246,8 @@ Funcionamiento detallado del sistema</h1>
 </li>
 </ul>
 </li>
-<li>Mientras la puerta está abierta (<code>OPEN</code>), pasarán <code>AUTOMATIC_DOOR_INACTIVITY_TIMEOUT_MS</code> milisegundos para cerrarse. Pasados dicho tiempo, vuelve a saltar la ISR <code><a class="el" href="interr_8c.html#a38ad4725462bdc5e86c4ead4f04b9fc2" title="Interrupt service routine for the TIM2 timer.">TIM2_IRQHandler()</a></code>. La ISR realiza las mismas acciones antes mencionadas.</li>
-<li>En el estado <code>OPEN</code>, la FSM comprobará con la función <code><a class="el" href="fsm__automatic__door_8c.html#a8d6039c436ce880060caee9e116214d1" title="Check if the closing timeout has expired.">check_closing_timeout()</a></code> que el <em>flag</em> <code>timeout</code> del motor está activo. Si es así, la FSM pasa al estado <code>CLOSING</code> y llama a la función <code><a class="el" href="fsm__automatic__door_8c.html#aadc807fcae86e5e359ef2d3fde33f841" title="Close the door.">do_close_door()</a></code>.<ul>
+<li>Mientras la puerta está abierta (<code>OPEN</code>), pasarán <code>AUTOMATIC_DOOR_INACTIVITY_TIMEOUT_MS</code> milisegundos para cerrarse. Pasado dicho tiempo, vuelve a saltar la ISR <code><a class="el" href="interr_8c.html#a38ad4725462bdc5e86c4ead4f04b9fc2" title="Interrupt service routine for the Timer 2 (TIM2).">TIM2_IRQHandler()</a></code>. La ISR realiza las mismas acciones antes mencionadas.</li>
+<li>En el estado <code>OPEN</code>, la FSM comprobará con la función <code><a class="el" href="fsm__automatic__door_8c.html#a8d6039c436ce880060caee9e116214d1" title="Check if the closing timeout has expired.">check_closing_timeout()</a></code> que el <em>flag</em> <code>motor_timeout_status</code> del motor está activo. Si es así, la FSM pasa al estado <code>CLOSING</code> y llama a la función <code><a class="el" href="fsm__automatic__door_8c.html#aadc807fcae86e5e359ef2d3fde33f841" title="Close the door.">do_close_door()</a></code>.<ul>
 <li>La función <code><a class="el" href="fsm__automatic__door_8c.html#aadc807fcae86e5e359ef2d3fde33f841" title="Close the door.">do_close_door()</a></code>:<ul>
 <li>Apaga el LED verde (<code>led_opening</code>).</li>
 <li>Activa el temporizador del LED rojo (<code>led_closing</code>) para que parpadee.</li>
@@ -257,12 +259,12 @@ Funcionamiento detallado del sistema</h1>
 </li>
 <li>También en el estado <code>OPEN</code>, si se detecta una presencia (sensor PIR), o se pulsa el botón, deberá abrir la puerta (función <code><a class="el" href="fsm__automatic__door_8c.html#ae16520a83ee79515df373a4fedc6763d" title="Check if there is a presence in front of the door or the button has been pressed (only pressed,...">check_keep_open()</a></code>), la FSM se mantiene en el estado <code>OPEN</code> y llama a la función <code><a class="el" href="fsm__automatic__door_8c.html#ae56229d49450daac65a9d8aa3a6447ab" title="Restart the motor timeout timer if a presence is detected or the button is pressed.">do_keep_open()</a></code>.<ul>
 <li>La función <code><a class="el" href="fsm__automatic__door_8c.html#ae56229d49450daac65a9d8aa3a6447ab" title="Restart the motor timeout timer if a presence is detected or the button is pressed.">do_keep_open()</a></code>:<ul>
-<li>Re-activa el temporizador del motor, de nuevo, para controlar el tiempo que la puerta está abierta sea de nuevo <code>AUTOMATIC_DOOR_INACTIVITY_TIMEOUT_MS</code> milisegundos.</li>
+<li>Reactiva el temporizador del motor, de nuevo, para controlar el tiempo que la puerta está abierta sea de nuevo <code>AUTOMATIC_DOOR_INACTIVITY_TIMEOUT_MS</code> milisegundos.</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>En el estado <code>CLOSING</code>, el LED rojo está parpadeando y la FSM comprueba con la función <code><a class="el" href="fsm__automatic__door_8c.html#a8d6039c436ce880060caee9e116214d1" title="Check if the closing timeout has expired.">check_closing_timeout()</a></code> si el <em>flag</em> <code>timeout</code> se ha activado, <em>i.e.</em>, ha pasado el tiempo de cerrarse. Si es así, la FSM pasa al estado <code>CLOSED</code> y llama a la función <code><a class="el" href="fsm__automatic__door_8c.html#a74cc2aeda63bea9a44bf4ab7a158b183" title="Stay with the door closed.">do_stay_closed()</a></code>.<ul>
+<li>En el estado <code>CLOSING</code>, el LED rojo está parpadeando y la FSM comprueba con la función <code><a class="el" href="fsm__automatic__door_8c.html#a8d6039c436ce880060caee9e116214d1" title="Check if the closing timeout has expired.">check_closing_timeout()</a></code> si el <em>flag</em> <code>motor_timeout_status</code> se ha activado, <em>i.e.</em>, ha pasado el tiempo de cerrarse. Si es así, la FSM pasa al estado <code>CLOSED</code> y llama a la función <code><a class="el" href="fsm__automatic__door_8c.html#a74cc2aeda63bea9a44bf4ab7a158b183" title="Stay with the door closed.">do_stay_closed()</a></code>.<ul>
 <li>La función <code><a class="el" href="fsm__automatic__door_8c.html#a74cc2aeda63bea9a44bf4ab7a158b183" title="Stay with the door closed.">do_stay_closed()</a></code>:<ul>
 <li>Deja el LED rojo (<code>led_closing</code>) fijo.</li>
 <li>Desactiva el temporizador del parpadeo del LED rojo.</li>
@@ -275,7 +277,7 @@ Funcionamiento detallado del sistema</h1>
 <li>La función <code><a class="el" href="fsm__automatic__door_8c.html#a2a399d96e43e3a61d1f1ae4a17855f2d" title="Stop closing the door and open it again if a presence is detected or the button is pressed.">do_stop_closing_door()</a></code>:<ul>
 <li>Deja el LED rojo (<code>led_closing</code>) fijo.</li>
 <li>Desactiva el temporizador del parpadeo del LED rojo.</li>
-<li>Llama a la función <code><a class="el" href="fsm__automatic__door_8c.html#a244a70d8720c24c7a128e2c52f929476" title="Open the door.">do_open_door()</a></code> que realiza las mismas acciones que cuando se abre la puerta. &gt;[!NOTE] &gt; La implementación actual no contempla el tiempo que llevaba la puerta cerrándose, y el motor volverá a abrirse estando activo todo el tiempo que se haya configurado para la apertura. Una versión mejorada debería tener en cuenta el tiempo que llevaba cerrándose y abrirse durante el mismo tiempo.</li>
+<li>Llama a la función <code><a class="el" href="fsm__automatic__door_8c.html#a244a70d8720c24c7a128e2c52f929476" title="Open the door.">do_open_door()</a></code> que realiza las mismas acciones que cuando se abre la puerta. &gt;[!NOTE] &gt; La implementación actual no contempla el tiempo que llevaba la puerta cerrándose, y el motor volverá a abrirse estando activo todo el tiempo que se haya configurado para la apertura. Una versión mejorada debería <b>tener en cuenta el tiempo que llevaba cerrándose y abrirse durante el mismo tiempo</b>.</li>
 </ul>
 </li>
 </ul>
