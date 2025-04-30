@@ -19,7 +19,7 @@
 * En el `main()` crea la máquina de estados y la inicializa llamando a la función `fsm_automatic_door_new()`.
   
     > [!TIP]
-    > Los parámetros de la función `fsm_automatic_door_new()` son las direcciones de memoria del sensor de presencia, el botón de emergencia y los LEDs de indicación de funcionamiento. Estos se encuentran definidos en su *port* correspondiente.
+    > Los parámetros de la función `fsm_automatic_door_new()` son los identificadores (IDs) del sensor de presencia, el botón de emergencia y los LEDs de indicación de funcionamiento. Estos se encuentran definidos en su *port* correspondiente.
 
 **2. Compruebe que el código funciona correctamente y súbalo a Moodle.**
 

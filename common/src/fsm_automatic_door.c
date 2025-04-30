@@ -282,7 +282,6 @@ void do_stay_closed(fsm_t *p_this)
  */
 fsm_trans_t fsm_trans_automatic_door[] = {
 
-    
 };
 
 uint32_t fsm_automatic_door_get_last_time_presence(fsm_automatic_door_t *p_this)
@@ -303,37 +302,33 @@ bool fsm_automatic_door_get_presence_status(fsm_automatic_door_t *p_this)
  * > **TO-DO alumnos:**
  * >
  * > ✅ 1. Initialize the FSM structure with the FSM library calling the `fsm_init()` with the original FSM (fsm_t type) and the transition table. \n
- * > &nbsp;&nbsp;&nbsp;&nbsp;💡 **Do not forget to cast the pointer to the FSM structure** to type `fsm_automatic_door_t` after the initialization. \n
- * > ✅ 2. Assign the peripherals to the FSM structure: button, LEDs, PIR sensor, and motor. \n
+ * > &nbsp;&nbsp;&nbsp;&nbsp;💡 **Call the function passing the address of the FSM `f` of the struct `p_fsm_automatic_door` ** \n
+ * > ✅ 2. Assign the peripherals' IDs to the FSM structure: button, LEDs, PIR sensor, and motor. \n
  * > ✅ 3. Initialize the last time the presence was detected in the FSM structure. \n
  * > ✅ 4. Initialize the presence status flag in the FSM structure. \n
  * > ✅ 5. Initialize the peripherals: button, LEDs, PIR sensor, and motor calling the corresponding initialization functions from the port layer: `port_button_init()`, `port_led_init()`, `port_pir_sensor_init()`, and `port_motor_init()`. \n
  * > ✅ 6. Turn the red LED on calling the `port_led_set_value()` function. \n
  *
- * @param p_this Pointer to the FSM structure
- * @param p_button Pointer to the button structure
- * @param led_opening_id Pointer to the LED structure
- * @param led_closing_id Pointer to the LED structure
- * @param p_pir Pointer to the PIR sensor structure
- * @param motor_id Pointer to the motor structure
+ * @param p_fsm_automatic_door Pointer to the FSM structure
+ * @param button_id Button ID
+ * @param led_opening_id Opening LED ID
+ * @param led_closing_id Closing LED ID
+ * @param pir_sensor_id PIR sensor ID
+ * @param motor_id Motor ID
  */
 void fsm_automatic_door_init(fsm_automatic_door_t *p_fsm_automatic_door, uint32_t button_id, uint32_t led_opening_id, uint32_t led_closing_id, uint32_t pir_sensor_id, uint32_t motor_id)
 {
     fsm_init(&p_fsm_automatic_door->f, fsm_trans_automatic_door);
 
     // Assign the peripherals to the FSM
-    
 
     // Initialize the last time the  was activated
-    
 
     // Initialize the presence status
-    
 
     // Initialize the peripherals
 
     // Set the LED closed
-    
 }
 
 /* Create FSM */

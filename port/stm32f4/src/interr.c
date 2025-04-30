@@ -111,7 +111,7 @@ void TIM2_IRQHandler(void)
 {
   // Get the timer handler for the motor
   TIM_HandleTypeDef *p_handler_tim_motor = stm32f4_get_motor_timer_handler(PORT_MOTOR_AUTOMATIC_DOOR_ID); // Get the timer handler
-  
+
   HAL_TIM_IRQHandler(p_handler_tim_motor); // This will clear the update flag internally.
 }
 
@@ -125,7 +125,7 @@ void TIM2_IRQHandler(void)
 void TIM3_IRQHandler(void)
 {
   TIM_HandleTypeDef *p_handler_tim_led_opening = stm32f4_get_led_timer_handler(PORT_LED_OPENING_ID); // Get the timer handler
-  HAL_TIM_IRQHandler(p_handler_tim_led_opening); // This will clear the update flag internally.  
+  HAL_TIM_IRQHandler(p_handler_tim_led_opening);                                                     // This will clear the update flag internally.
 }
 
 /**
@@ -137,8 +137,8 @@ void TIM3_IRQHandler(void)
  */
 void TIM4_IRQHandler(void)
 {
-  TIM_HandleTypeDef *p_handler_tim_led_closing = stm32f4_get_led_timer_handler(PORT_LED_CLOSING_ID); // Get the timer handler  
-  HAL_TIM_IRQHandler(p_handler_tim_led_closing); // This will clear the update flag internally.
+  TIM_HandleTypeDef *p_handler_tim_led_closing = stm32f4_get_led_timer_handler(PORT_LED_CLOSING_ID); // Get the timer handler
+  HAL_TIM_IRQHandler(p_handler_tim_led_closing);                                                     // This will clear the update flag internally.
 }
 
 /**

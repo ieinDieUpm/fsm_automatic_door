@@ -1,5 +1,5 @@
 /**
- * @file port_motor.c
+ * @file stm32f4_motor.c
  * @author Josué Pagán (j.pagan@upm.es)
  * @brief Port layer for the motor connected to an STM32F4 Nucleo board.
  * @version 0.1
