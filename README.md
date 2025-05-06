@@ -10,7 +10,7 @@ El sistema usa una FSM para gestionar los diferentes estados del sistema y el ha
 
 Puede generar tantos detectores de presencia como desee creando una nueva FSM y asignando los identificadores periféricos correspondientes al sistema.
 
-Puede descargar los código fuente de este proyecto en el siguiente [enlace](https://github.com/ieinDieUpm/fsm_automatic_door).
+Puede descargar los código fuente de este proyecto en el siguiente [enlace](https://github.com/ieinDieUpm/fsm_automatic_door/tree/hal_version).
 
 ## Implementación HW
 
@@ -52,30 +52,30 @@ Hay 2 LEDs para indicar el estado del sistema. Un **LED verde** (`led_opening`) 
 
 Ambos LEDs parpadean con un intervalo de interrupción diferente. Cada uno es controlado por un temporizador diferente para generar interrupciones.
 
-| Parameter     | Value               |
-| ------------- | ------------------- |
-| Variable name | led_opening         |
-| Pin           | PB6 (D10 on Nucleo) |
-| Mode          | Output              |
-| Pull up/ down | No push no pull     |
-| Timer         | TIM3                |
-| Interrupt     | TIM3_IRQHandler()   |
-| Time interval | 500 ms              |
-| Priority      | 2                   |
-| Subpriority   | 0                   |
+| Parameter     | Value              |
+| ------------- | ------------------ |
+| Variable name | led_opening        |
+| Pin           | PB3 (D3 on Nucleo) |
+| Mode          | Output             |
+| Pull up/ down | No push no pull    |
+| Timer         | TIM3               |
+| Interrupt     | TIM3_IRQHandler()  |
+| Time interval | 500 ms             |
+| Priority      | 2                  |
+| Subpriority   | 0                  |
 
 
-| Parameter     | Value               |
-| ------------- | ------------------- |
-| Variable name | led_closing         |
-| Pin           | PB9 (D14 on Nucleo) |
-| Mode          | Output              |
-| Pull up/ down | No push no pull     |
-| Timer         | TIM4                |
-| Interrupt     | TIM4_IRQHandler()   |
-| Time interval | 100 ms              |
-| Priority      | 2                   |
-| Subpriority   | 0                   |
+| Parameter     | Value              |
+| ------------- | ------------------ |
+| Variable name | led_closing        |
+| Pin           | PB4 (D5 on Nucleo) |
+| Mode          | Output             |
+| Pull up/ down | No push no pull    |
+| Timer         | TIM4               |
+| Interrupt     | TIM4_IRQHandler()  |
+| Time interval | 100 ms             |
+| Priority      | 2                  |
+| Subpriority   | 0                  |
 
 ### Motor
 
