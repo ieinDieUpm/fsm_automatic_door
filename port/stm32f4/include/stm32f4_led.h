@@ -18,9 +18,9 @@
 /* Defines and macros --------------------------------------------------------*/
 // HW Nucleo-STM32F446RE:
 #define STM32F4_LED_OPENING_GPIO_PORT         /*!< GPIO port of the LED for opening in the automatic door @hideinitializer */
-#define STM32F4_LED_OPENING_PIN_PORT          /*!< GPIO pin of the LED for opening in the automatic door @hideinitializer */
+#define STM32F4_LED_OPENING_GPIO_PIN          /*!< GPIO pin of the LED for opening in the automatic door @hideinitializer */
 #define STM32F4_LED_CLOSING_GPIO_PORT         /*!< GPIO port of the LED for closing in the automatic door @hideinitializer */
-#define STM32F4_LED_CLOSING_PIN_PORT          /*!< GPIO pin of the LED for closing in the automatic door @hideinitializer */
+#define STM32F4_LED_CLOSING_GPIPO_PIN          /*!< GPIO pin of the LED for closing in the automatic door @hideinitializer */
 #define STM32F4_LED_OPENING_TIMER             /*!< Timer to control the blinking of the opening LED @hideinitializer */
 #define STM32F4_LED_OPENING_TIMER_IRQ         /*!< Timer IRQn of the opening LED @hideinitializer */
 #define STM32F4_LED_OPENING_TIMER_IRQ_PRIO    /*!< IRQ priority of the opening LED @hideinitializer */

@@ -43,7 +43,7 @@ typedef struct
 static stm32f4_led_hw_t leds_arr[] = {
     [PORT_LED_OPENING_ID] = {
         .p_port = STM32F4_LED_OPENING_GPIO_PORT,
-        .pin = STM32F4_LED_OPENING_PIN_PORT,
+        .pin = STM32F4_LED_OPENING_GPIO_PIN,
         .p_timer = STM32F4_LED_OPENING_TIMER,
         .timer_irq = STM32F4_LED_OPENING_TIMER_IRQ,
         .timer_irq_prio = STM32F4_LED_OPENING_TIMER_IRQ_PRIO,
@@ -52,7 +52,7 @@ static stm32f4_led_hw_t leds_arr[] = {
     },
     [PORT_LED_CLOSING_ID] = {
         .p_port = STM32F4_LED_CLOSING_GPIO_PORT,
-        .pin = STM32F4_LED_CLOSING_PIN_PORT,
+        .pin = STM32F4_LED_CLOSING_GPIPO_PIN,
         .p_timer = STM32F4_LED_CLOSING_TIMER,
         .timer_irq = STM32F4_LED_CLOSING_TIMER_IRQ,
         .timer_irq_prio = STM32F4_LED_CLOSING_TIMER_IRQ_PRIO,
